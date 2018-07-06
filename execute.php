@@ -41,7 +41,7 @@ if(isset($message['text']))
 	$worldsym = json_decode('"\uD83C\uDF0F"');
 	$obj_desc = $text_url_array[0];
 	$short = make_bitly_url($url_affiliate,'ghir0','json');
-	$response = "Ecco il link di OnePlayerOneNes: $obj_desc\n$worldsym  $short";
+	$response = "Ecco il link di Tucx: $obj_desc\n$worldsym  $short";
 
   }
   elseif(strpos($text, "/mike") === 0 && strlen($text)>6 )
@@ -82,7 +82,7 @@ if(isset($message['text']))
 * prende un link amazon, estrapola l'ASIN e ricrea un link allo stesso prodotto con il referral
 */
 function set_referral_URL($url){
-	$referral = array("OnePlayerOneNes-21","OnePlayerOneNes-21","OnePlayerOneNes-21","OnePlayerOneNes-21");
+	$referral = array("tucxhardware-21","tucxhardware-21","tucxhardware-21","tucxhardware-21");
 	$random = mt_rand(0,3);
 	$GLOBALS['proprietario'] = $referral[$random];
 	$url_edited = "";
@@ -96,7 +96,7 @@ function set_referral_URL($url){
 	return $url_edited;
 }
 function set_mike_referral_URL($url){
-	$referral_mike = "OnePlayerOneNes-21";
+	$referral_mike = "tucxhardware-21";
 
 	$url_edited = "";
 	$parsed_url_array = parse_url($url);
@@ -109,7 +109,7 @@ function set_mike_referral_URL($url){
 	return $url_edited;
 }
 function set_dc_referral_URL($url){
-	$referral_dc = "OnePlayerOneNes-21";
+	$referral_dc = "tucxhardware-21";
 
 	$url_edited = "";
 	$parsed_url_array = parse_url($url);
